@@ -48,7 +48,7 @@ public class PilotController {
 	}
 	
 	@RequestMapping(value="/pilot/delete/{id}", method=RequestMethod.GET)
-	private String deleteFlight(@PathVariable(value="id")String id, Model model){	
+	private String deletePilot(@PathVariable(value="id")String id, Model model){	
 		
 		pilotService.deletePilot(Long.parseLong(id));
 		return "delete";

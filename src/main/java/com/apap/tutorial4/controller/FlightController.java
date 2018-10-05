@@ -75,16 +75,7 @@ public class FlightController {
 		return "view-flight";
 	}
 	
-	@RequestMapping("/flight/view")
-	public String viewNumber(@RequestParam("flightNumber") String flightNumber, Model model) {
-		FlightModel archiveFlight = flightService.getFlightDetailNumber(flightNumber);
-		PilotModel archivePilot = archiveFlight.getPilot();
-		
-		model.addAttribute("flight",archiveFlight);
-		model.addAttribute("pilot",archivePilot);
-		return "view-flight";
-	}
-	
+
 	
 }
 

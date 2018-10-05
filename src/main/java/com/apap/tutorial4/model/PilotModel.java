@@ -36,7 +36,7 @@ public class PilotModel implements Serializable {
 	private int flyHour;
 	
 	
-	@OneToMany(mappedBy = "pilot", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+	@OneToMany(mappedBy = "pilot", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<FlightModel> pilotFlight;
 
 
